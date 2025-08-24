@@ -1,4 +1,4 @@
-name: Deploy Academic Website
+name: Deploy Astro Homepage
 
 on:
   push:
