@@ -1,0 +1,34 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development astro dev",
+    "dev:prod": "NODE_ENV=production astro dev",
+    "build": "NODE_ENV=production astro build",
+    "build:dev": "NODE_ENV=development astro build",
+    "preview": "astro preview",
+    "preview:prod": "NODE_ENV=production astro preview",
+    "astro": "astro",
+    "env:info": "node -e \"import('./config/env.mjs').then(m => m.logEnvironmentInfo())\"",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "astro": "^5.2.5",
+    "citation-js": "^0.7.20",
+    "lucide-react": "^0.539.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0"
+  }
+}

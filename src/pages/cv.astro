@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="CV - Your Name">
+  <Navigation />
+  
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-12 flex items-center justify-between">
+      <div>
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Guanghao Jin - Curriculum Vitae</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400">
+          Master's Student in Computer Science, Ludwig-Maximilians-Universität München
+        </p>
+      </div>
+      <a
+        href="/cv.pdf"
+        class="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-medium"
+      >
+        Download PDF
+      </a>
+    </div>
+
+    <div class="space-y-12">
+      <!-- Education -->
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">
+          Education
+        </h2>
+        <div class="space-y-6">
+          <div>
+            <div class="flex items-start justify-between mb-2">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  M.S. in Computer Science (In Progress)
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">Ludwig-Maximilians-Universität München (LMU Munich)</p>
+              </div>
+              <span class="text-sm text-gray-500 dark:text-gray-400">2023-2025</span>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 text-sm">
+              Focus: Computer Vision, Explainable AI, Medical Imaging<br>
+              Research Areas: AI Agents in Medical Applications, EEG Signal Processing<br>
+              Expected Graduation: 2025
+            </p>
+          </div>
+          
+          <div>
+            <div class="flex items-start justify-between mb-2">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  B.S. in Computer Science
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">Ludwig-Maximilians-Universität München (LMU Munich)</p>
+              </div>
+              <span class="text-sm text-gray-500 dark:text-gray-400">2020-2023</span>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 text-sm">
+              Strong foundation in Computer Science<br>
+              Relevant Coursework: Data Structures, Algorithms, Machine Learning, Computer Vision, Signal Processing
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">
+          Experience
+        </h2>
+        <div class="space-y-6">
+          <div>
+            <div class="flex items-start justify-between mb-2">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  Research Student
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">Ludwig-Maximilians-Universität München, Department of Computer Science</p>
+              </div>
+              <span class="text-sm text-gray-500 dark:text-gray-400">2023-Present</span>
+            </div>
+            <ul class="text-gray-700 dark:text-gray-300 text-sm space-y-1 ml-4 list-disc">
+              <li>Conducting research on AI agents in medical applications</li>
+              <li>Developing EEG-based neurological disorder detection models</li>
+              <li>Working on explainable AI and computer vision projects</li>
+              <li>Published multiple papers in Brain Sciences journal and arXiv</li>
+            </ul>
+          </div>
+          
+          <div>
+            <div class="flex items-start justify-between mb-2">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  Research Collaborator
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">Various Research Projects</p>
+              </div>
+              <span class="text-sm text-gray-500 dark:text-gray-400">2024-2025</span>
+            </div>
+            <ul class="text-gray-700 dark:text-gray-300 text-sm space-y-1 ml-4 list-disc">
+              <li>Co-authored multiple research papers in medical AI and computer vision</li>
+              <li>Collaborated on EEG signal processing and neurological disorder detection</li>
+              <li>Contributed to benchmark development for referring expression comprehension</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards & Honors -->
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">
+          Awards & Achievements
+        </h2>
+        <div class="space-y-4">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-white">Multiple Publications in Brain Sciences</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">Brain Sciences Journal</p>
+            </div>
+            <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+          </div>
+          
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-white">arXiv Publications</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">Multiple research papers published on arXiv</p>
+            </div>
+            <span class="text-sm text-gray-500 dark:text-gray-400">2025</span>
+          </div>
+          
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-semibold text-gray-900 dark:text-white">Bachelor's Degree Completion</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">Ludwig-Maximilians-Universität München</p>
+            </div>
+            <span class="text-sm text-gray-500 dark:text-gray-400">2023</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">
+          Technical Skills
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Programming Languages</h3>
+            <div class="flex flex-wrap gap-2">
+              {['Python', 'MATLAB', 'C++', 'R', 'JavaScript', 'Java'].map((skill) => (
+                <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Frameworks & Tools</h3>
+            <div class="flex flex-wrap gap-2">
+              {['PyTorch', 'TensorFlow', 'OpenCV', 'Scikit-learn', 'EEG Analysis Tools', 'Medical Imaging'].map((skill) => (
+                <span class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service -->
+      <section>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 pb-2 border-b border-gray-200 dark:border-gray-700">
+          Research Areas & Interests
+        </h2>
+        <div class="space-y-4">
+          <div>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Current Research Focus</h3>
+            <ul class="text-gray-700 dark:text-gray-300 text-sm space-y-1 ml-4 list-disc">
+              <li>AI Agents in Medical Applications</li>
+              <li>Medical Imaging Analysis and Computer Vision</li>
+              <li>EEG Signal Processing for Neurological Disorder Detection</li>
+              <li>Explainable AI and Interpretable Machine Learning</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Research Interests</h3>
+            <ul class="text-gray-700 dark:text-gray-300 text-sm space-y-1 ml-4 list-disc">
+              <li>Computer Vision for Healthcare Applications</li>
+              <li>Medical Imaging Analysis</li>
+              <li>Signal Processing, particularly EEG analysis</li>
+              <li>Real-world Knowledge Integration in AI Systems</li>
+              <li>Referring Expression Comprehension</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

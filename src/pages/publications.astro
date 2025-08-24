@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+// Manually define publications for now
+const publications = [
+  {
+    title: "KnowDR-REC: A Benchmark for Referring Expression Comprehension with Real-World Knowledge",
+    authors: "Guanghao Jin, Jingpei Wu, Tianpei Guo, Yiyi Niu, Weidong Zhou, Guoyang Liu",
+    venue: "arXiv preprint arXiv:2508.14080",
+    year: 2025,
+    type: "preprint",
+    url: "https://arxiv.org/abs/2508.14080"
+  },
+  {
+    title: "NeuroDx-LM: A Clinical Large-Scale Model for EEG-based Neurological Disorder Detection",
+    authors: "Guanghao Jin, Yuan Liang, Yihan Ma, Jingpei Wu, Guoyang Liu",
+    venue: "arXiv preprint arXiv:2508.08124",
+    year: 2025,
+    type: "preprint",
+    url: "https://arxiv.org/abs/2508.08124"
+  },
+  {
+    title: "Efficient Convolution Accelerator Using Number-Theoretic Transform for Deep Learning on Fpga",
+    authors: "Lingfeng Bai, Rui Zhang, Weidong Zhou, Lan Tian, Guanghao Jin, Guoyang Liu",
+    venue: "2025 IEEE 2nd International Conference on Deep Learning and Computer Vision (DLCV)",
+    year: 2025,
+    type: "conference",
+    pages: "1-5"
+  },
+  {
+    title: "EEG-Based Seizure Detection Using Dual-Branch CNN-ViT Network Integrating Phase and Power Spectrograms",
+    authors: "Zhuohan Wang, Yaoqi Hu, Qingyue Xin, Guanghao Jin, Yazhou Zhao, Weidong Zhou, Guoyang Liu",
+    venue: "Brain Sciences",
+    year: 2025,
+    type: "journal",
+    volume: "15",
+    number: "5",
+    pages: "509",
+    publisher: "MDPI"
+  }
+];
+
+// Function to get publication badges
+function getBadges(pub) {
+  const badges = [];
+  if (pub.url) badges.push({ type: 'PDF', url: pub.url, color: 'red' });
+  if (pub.type === 'preprint' && pub.url && pub.url.includes('arxiv')) {
+    badges.push({ type: 'arXiv', url: pub.url, color: 'green' });
+  }
+  if (pub.type === 'journal') {
+    badges.push({ type: 'Journal', url: '#', color: 'blue' });
+  }
+  if (pub.type === 'conference') {
+    badges.push({ type: 'Conference', url: '#', color: 'purple' });
+  }
+  return badges;
+}
+---
+
+<Layout title="Research & Publications - Your Name">
+  <Navigation />
+  
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Research & Publications</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        My research work, course projects, and any publications or preprints I've contributed to.
+      </p>
+    </div>
+
+    <!-- Statistics -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 text-center">
+        <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
+          {publications.length}
+        </div>
+        <div class="text-gray-600 dark:text-gray-400 font-medium">Publications</div>
+      </div>
+      
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 text-center">
+        <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
+          {Math.max(...publications.map(p => p.year))}
+        </div>
+        <div class="text-gray-600 dark:text-gray-400 font-medium">Latest Year</div>
+      </div>
+      
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 text-center">
+        <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
+          4
+        </div>
+        <div class="text-gray-600 dark:text-gray-400 font-medium">Research Areas</div>
+      </div>
+    </div>
+
+    <!-- Publications List -->
+    <div class="space-y-8">
+      {publications.map((pub, index) => {
+        const badges = getBadges(pub);
+        
+        return (
+          <article class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+            <div class="mb-4">
+              <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 leading-tight">
+                {pub.title}
+              </h2>
+              
+              <div class="text-gray-600 dark:text-gray-400 mb-2">
+                <span class="font-medium">{pub.authors}</span>
+              </div>
+              
+              <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-500 mb-4">
+                <span>
+                  {pub.venue} {pub.year}
+                </span>
+                {pub.volume && <span>Vol. {pub.volume}</span>}
+                {pub.pages && <span>pp. {pub.pages}</span>}
+              </div>
+
+              <div class="flex flex-wrap gap-2">
+                {badges.map((badge) => (
+                  badge.url ? (
+                    <a
+                      href={badge.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium transition-colors hover:opacity-80 ${
+                        badge.color === 'red' ? 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-800' :
+                        badge.color === 'blue' ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800' :
+                        badge.color === 'green' ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 hover:bg-green-200 dark:hover:bg-green-800' :
+                        'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 hover:bg-purple-200 dark:hover:bg-purple-800'
+                      }`}
+                    >
+                      {badge.type}
+                    </a>
+                  ) : (
+                    <span
+                      class={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
+                        badge.color === 'red' ? 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200' :
+                        badge.color === 'blue' ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200' :
+                        badge.color === 'green' ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200' :
+                        'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200'
+                      }`}
+                    >
+                      {badge.type}
+                    </span>
+                  )
+                ))}
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

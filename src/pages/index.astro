@@ -1,0 +1,192 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Dr. Your Name - Academic Homepage">
+  <Navigation />
+  
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Hero Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center mb-20">
+      <div class="lg:col-span-2">
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          Guanghao Jin
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">
+          Master's Student in Computer Science, Ludwig-Maximilians-Universität München
+        </p>
+        <p class="text-lg text-gray-700 dark:text-gray-400 leading-relaxed mb-8">
+          I am a master's student at Ludwig-Maximilians-Universität München (LMU Munich), where I also completed my bachelor's degree. 
+          My research interests span computer vision, explainable AI, and medical imaging, with a current focus on AI agents in medical applications. 
+          Additionally, I have experience in signal processing, particularly EEG signal analysis.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/publications" class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
+            Research Papers
+          </a>
+          <a href="mailto:guanghaojin56@gmail.com" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 px-6 py-3 font-medium">
+            Contact Me
+          </a>
+        </div>
+      </div>
+      
+      <div class="flex justify-center lg:justify-end">
+        <div class="w-64 h-64 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-6xl font-bold shadow-lg">
+          GJ
+        </div>
+      </div>
+    </div>
+
+    <!-- News Section -->
+    <section class="mb-20">
+      <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Latest News</h2>
+      <div class="space-y-3">
+        <div class="flex items-center justify-between py-2 border-b border-gray-200 dark:border-gray-700">
+          <p class="text-gray-900 dark:text-white">
+            <span class="font-medium">Aug 2025:</span> Our new paper "KnowDR-REC: A Benchmark for Referring Expression Comprehension with Real-World Knowledge" is now available on arXiv.
+          </p>
+        </div>
+        
+        <div class="flex items-center justify-between py-2 border-b border-gray-200 dark:border-gray-700">
+          <p class="text-gray-900 dark:text-white">
+            <span class="font-medium">Aug 2025:</span> Our new paper "NeuroDx-LM: A Clinical Large-Scale Model for EEG-based Neurological Disorder Detection" is now available on arXiv.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-between py-2 border-b border-gray-200 dark:border-gray-700">
+          <p class="text-gray-900 dark:text-white">
+            <span class="font-medium">Jun 2025:</span> One paper is accepted by IEEE 2nd International Conference on Deep Learning and Computer Vision (DLCV).
+          </p>
+        </div>
+        
+        <div class="flex items-center justify-between py-2">
+          <p class="text-gray-900 dark:text-white">
+            <span class="font-medium">May 2025:</span> One paper is accepted by Brain Sciences.
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-8">
+        <a href="/news" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium">
+          View all news →
+        </a>
+      </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section class="mb-20">
+      <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Research Interests</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Explainable AI</h3>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Computer Vision</h3>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Medical Imaging</h3>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">EEG Signal Processing</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Publications -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Research</h2>
+      
+      <div class="space-y-6">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            KnowDR-REC: A Benchmark for Referring Expression Comprehension with Real-World Knowledge
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-2">
+            <strong>Guanghao Jin</strong>, Jingpei Wu, Tianpei Guo, Yiyi Niu, Weidong Zhou, Guoyang Liu
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-500 mb-4">
+            arXiv preprint arXiv:2508.14080 2025
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+            We introduce KnowDR-REC, a comprehensive benchmark for referring expression comprehension that incorporates real-world knowledge. This work addresses the challenge of understanding complex referring expressions in natural language processing and computer vision applications.
+          </p>
+          <div class="flex gap-2">
+            <a
+              href="https://arxiv.org/abs/2508.14080"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-800 transition-colors"
+            >
+              arXiv
+            </a>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
+              Preprint
+            </span>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+            NeuroDx-LM: A Clinical Large-Scale Model for EEG-based Neurological Disorder Detection
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-2">
+            <strong>Guanghao Jin</strong>, Yuan Liang, Yihan Ma, Jingpei Wu, Guoyang Liu
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-500 mb-4">
+            arXiv preprint arXiv:2508.08124 2025
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+            This paper presents NeuroDx-LM, a clinical large-scale model designed for EEG-based neurological disorder detection. Our approach leverages advanced deep learning techniques to analyze EEG signals and provide accurate diagnosis support for various neurological conditions.
+          </p>
+          <div class="flex gap-2">
+            <a
+              href="https://arxiv.org/abs/2508.08124"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-800 transition-colors"
+            >
+              arXiv
+            </a>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
+              Preprint
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8">
+        <a href="/publications" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium">
+          View all publications →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
