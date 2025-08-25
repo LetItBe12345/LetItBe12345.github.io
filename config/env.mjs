@@ -28,7 +28,7 @@ export function getEnvConfig() {
     NODE_ENV: env,
     ASTRO_SITE: envVars.ASTRO_SITE || (env === 'production' ? 'https://letitbe12345.github.io' : 'http://localhost:4321'),
     ASTRO_BASE: envVars.ASTRO_BASE || '/',
-    ASTRO_BUILD_FORMAT: envVars.ASTRO_BUILD_FORMAT || 'file',
+    ASTRO_BUILD_FORMAT: envVars.ASTRO_BUILD_FORMAT || 'directory',
     IS_DEVELOPMENT: env === 'development',
     IS_PRODUCTION: env === 'production'
   };
