@@ -4,11 +4,11 @@ import ThemeToggle from './ThemeToggle.jsx';
 const currentPath = Astro.url.pathname;
 const base = import.meta.env.BASE_URL;
 const navItems = [
-  { href: base, label: 'Home' },
-  { href: `${base}publications/`, label: 'Publications' },
-  { href: `${base}news/`, label: 'News' },
-  { href: `${base}cv/`, label: 'CV' },
-  { href: `${base}repositories/`, label: 'Repositories' }
+  { href: base, label: 'Home', key: 'nav.home' },
+  { href: `${base}publications/`, label: 'Publications', key: 'nav.publications' },
+  { href: `${base}news/`, label: 'News', key: 'nav.news' },
+  { href: `${base}cv/`, label: 'CV', key: 'nav.cv' },
+  { href: `${base}repositories/`, label: 'Repositories', key: 'nav.repositories' }
 ];
 ---
 
@@ -23,7 +23,7 @@ const navItems = [
       
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-8">
-          {navItems.map(({ href, label }) => (
+          {navItems.map(({ href, label, key }) => (
             <a
               href={href}
               class={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -32,7 +32,7 @@ const navItems = [
                   : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800'
               }`}
             >
-              {label}
+              <span data-i18n={key}>{label}</span>
             </a>
           ))}
         </div>
@@ -40,6 +40,9 @@ const navItems = [
 
       <div class="flex items-center space-x-4">
         <ThemeToggle client:load />
+        <button id="lang-toggle" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800" onclick="window.__i18n && window.__i18n.toggleLang()">
+          <span data-i18n="btn.lang">中文</span>
+        </button>
         <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -51,7 +54,7 @@ const navItems = [
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden pb-3">
       <div class="px-2 pt-2 pb-3 space-y-1">
-        {navItems.map(({ href, label }) => (
+        {navItems.map(({ href, label, key }) => (
           <a
             href={href}
             class={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
@@ -60,7 +63,7 @@ const navItems = [
                 : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800'
             }`}
           >
-            {label}
+            <span data-i18n={key}>{label}</span>
           </a>
         ))}
       </div>
