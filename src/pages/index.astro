@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="Dr. Your Name - Academic Homepage">
+<Layout title="Guanghao Jin">
   <Navigation />
   
   <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -23,7 +25,7 @@ import Footer from '../components/Footer.astro';
           Additionally, I have experience in signal processing, particularly EEG signal analysis.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="/publications" class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
+          <a href={`${base}publications/`} class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
             Research Papers
           </a>
           <a href="mailto:guanghaojin56@gmail.com" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 px-6 py-3 font-medium">
@@ -69,7 +71,7 @@ import Footer from '../components/Footer.astro';
       </div>
       
       <div class="mt-8">
-        <a href="/news" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium">
+        <a href={`${base}news/`} class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium">
           View all news →
         </a>
       </div>
@@ -181,7 +183,7 @@ import Footer from '../components/Footer.astro';
       </div>
       
       <div class="mt-8">
-        <a href="/publications" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium">
+        <a href={`${base}publications/`} class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium">
           View all publications →
         </a>
       </div>

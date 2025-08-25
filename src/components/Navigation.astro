@@ -2,12 +2,13 @@
 import ThemeToggle from './ThemeToggle.jsx';
 
 const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/publications', label: 'Publications' },
-  { href: '/news', label: 'News' },
-  { href: '/cv', label: 'CV' },
-  { href: '/repositories', label: 'Repositories' }
+  { href: base, label: 'Home' },
+  { href: `${base}publications/`, label: 'Publications' },
+  { href: `${base}news/`, label: 'News' },
+  { href: `${base}cv/`, label: 'CV' },
+  { href: `${base}repositories/`, label: 'Repositories' }
 ];
 ---
 
@@ -15,7 +16,7 @@ const navItems = [
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <div class="flex-shrink-0">
-        <a href="/" class="text-xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+        <a href={base} class="text-xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
           Guanghao Jin
         </a>
       </div>

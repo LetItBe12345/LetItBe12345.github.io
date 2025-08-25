@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%
+% This LaTeX file recreates the supplied CV using the AltaCV class.
+% It requires `altacv.cls` to be present in the same directory.
+% The colour palette and layout follow the red and gold theme seen in the
+% original document.  Publications are listed manually rather than via a
+% bibliography file to mirror the numbered entries with coloured labels.
+
+\documentclass[10pt,a4paper,withhyper]{altacv}
+
+% Adjust the page geometry and column separation to roughly match the
+% original layout.  The paracol environment will automatically split
+% content across pages where necessary.
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% Define a colour scheme based on the PastelRed palette used in the
+% provided CV.  These colours originate from the AltaCV example and
+% reproduce the dark red headings and golden divider lines【522753511765313†L46-L126】.
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+% Begin the document
+\begin{document}
+
+% Header: name and photo.  Adjust the photo size as needed; the image file
+% `headshot.png` should be placed in the same folder as this source.
+\name{Guanghao~Jin}
+\tagline{}
+\photoR{2.8cm}{headshot}
+
+% Contact details.  Multiple emails are specified via \email and \printinfo.
+% Arbitrary fields such as Google Scholar are added with \printinfo.
+\personalinfo{%
+  % \mailaddress{Munich, Germany}
+  \email{guanghaojin56@gmail.com}
+  \homepage{https://letitbe12345.github.io/}
+  \printinfo{\faGithub}{GitHub}[https://github.com/LetItBe12345?tab=repositories]
+  \printinfo{\faGraduationCap}{Google Scholar}[https://scholar.google.com/citations?user=k_tlOvIAAAAJ&hl]
+  \printinfo{\faLinkedin}{LinkedIn}[https://www.linkedin.com/in/guanghao-jin-886513203/]
+}
+
+% Render the header
+\makecvheader
+
+% Set the column ratio; the left column occupies about two thirds of the page.
+
+
+% -------- Left column --------
+\cvsection{Experience}
+
+% \cvevent{Research Assistant, Department of Informatics}{Ludwig Maximilian University of Munich (LMU)}{Oct.~2021 -- Present}{Munich, Germany}
+% \begin{itemize}
+%   \item Conducting research on multimodal learning and video understanding.
+%   \item Mentoring and supervising master/bachelor thesis.
+%   \item Assisting and coordinating teaching responsibilities:
+%   \begin{itemize}
+%     \item \textbf{Tutorial}: Machine Learning (since SS2022)
+%     \item \textbf{Advanced Seminar}: Machine Learning with Knowledge Graphs, Foundation Models in AI
+%     \item \textbf{Practical Course}: Connecting Language to Vision
+%   \end{itemize}
+% \end{itemize}
+% \divider
+
+% \cvevent{Intern}{Agile Robots AG}{Mar.~2020 -- Nov.~2020}{Munich, Germany}
+% \begin{itemize}
+%   \item Developed an automated hand‑to‑eye camera calibration pipeline.
+%   \item Deployed and tested a robotic object localisation and grasping system.
+% \end{itemize}
+% \divider
+
+\cvevent{Student Assistant, Department of Informatics}{Technical University of Munich (TUM)}{Sept.~2019 -- Feb.~2020}{Munich, Germany}
+\begin{itemize}
+  \item Designed and implemented a perception stack in RoboMoSys (funded by European Horizon 2020).
+  \item Developed computer vision algorithms on robots, including object detection and recognition modules.
+\end{itemize}
+
+\cvsection{Education}
+
+% \cvevent{Ph.D.~Computer Science}{Ludwig Maximilian University of Munich (LMU)}{Oct.~2021 -- Present}{Munich, Germany}
+% \begin{itemize}
+%   \item Advisor: Prof.~Dr.~Volker Tresp.
+%   \item Thesis (provisional): Multi‑event Video Understanding and Reasoning.
+% \end{itemize}
+% \divider
+
+\cvevent{M.Sc.~Electrical Engineering and Information Technology}{Technical University of Munich (TUM)}{Oct.~2018 -- Jul.~2021}{Munich, Germany}
+\begin{itemize}
+  \item Grade: 1.3/1.0.
+\end{itemize}
+\divider
+
+\cvevent{B.Eng.~Opto‑Electronics Information Science and Engineering}{Zhejiang University}{Sept.~2014 -- Jul.~2018}{Hangzhou, China}
+\begin{itemize}
+  \item Grade: 3.73/4.00.
+\end{itemize}
+
+\cvsection{Research Publications}
+
+\textbf{Conference Proceedings}
+\begin{enumerate}[leftmargin=0.5cm,label=\raisebox{0pt}{\textcolor{PastelRed}{\large\bfseries\arabic*}},itemsep=0.5em]
+  \item L.~Bai, R.~Zhang, W.~Zhou, L.~Tian, \textbf{G.~Jin}, and G.~Liu, ``Efficient convolution accelerator using number‑theoretic transform for deep learning on FPGA,'' in \emph{2025 IEEE 2nd International Conference on Deep Learning and Computer Vision (DLCV)}, 2025, pp.~1–5.
+  % \item R.~Amoroso$^\*$, G.~Zhang$^\*$, R.~Koner, L.~Baraldi, R.~Cucchiara, V.~Tresp \emph{et al.}, ``Perceive, query \& reason: Enhancing video QA with question‑guided temporal queries,'' in \emph{Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)}, 2025. $^\*$Equal contribution.
+  % \item G.~Zhang, Y.~Zhang, K.~Zhang, and V.~Tresp, ``Can vision–language models be a good guesser? Exploring VLMs for times and location reasoning,'' in \emph{Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024)}, 2024.
+  % \item Y.~Zhang, H.~Chen, A.~Frikha, Y.~Yang, D.~Krompass, G.~Zhang, J.~Gu, and V.~Tresp, ``CL‑CrossVQA: A continual learning benchmark for cross‑domain visual question answering,'' in \emph{Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)}, 2025. \href{https://arxiv.org/abs/2211.10567}{URL}.
+  % \item R.~Liao, M.~Erler, H.~Wang, G.~Zhai, G.~Zhang, Y.~Ma, and V.~Tresp, ``VideoINSTA: Zero‑shot long video understanding via informative spatial–temporal reasoning with LLMs,'' in \emph{Proceedings of the Empirical Methods in Natural Language Processing (EMNLP 2024)}, 2024.
+\end{enumerate}
+
+\textbf{Journals}
+\begin{enumerate}[leftmargin=0.5cm,label=\raisebox{0pt}{\textcolor{PastelRed}{\large\bfseries\arabic*}},itemsep=0.5em]
+  \item Z.~Wang, Y.~Hu, Q.~Xin, \textbf{G.~Jin}, Y.~Zhao, W.~Zhou, and G.~Liu, ``EEG‑based seizure detection using dual‑branch CNN‑ViT network integrating phase and power spectrograms,'' \emph{Brain Sciences}, vol.~15, no.~5, p.~509, 2025.
+  % \item R.~Amoroso$^\*$, G.~Zhang$^\*$, R.~Koner, L.~Baraldi, R.~Cucchiara, V.~Tresp \emph{et al.}, ``Perceive, query \& reason: Enhancing video QA with question‑guided temporal queries,'' in \emph{Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)}, 2025. $^\*$Equal contribution.
+\end{enumerate}
+
+\vspace{1em}
+
+\textbf{Preprints}
+\begin{enumerate}[leftmargin=0.5cm,label=\raisebox{0pt}{\textcolor{PastelRed}{\large\bfseries\arabic*}},itemsep=0.5em]
+  \item \textbf{G.~Jin}, J.~Wu, T.~Guo, Y.~Niu, W.~Zhou, and G.~Liu, ``KnowDR‑REC: A benchmark for referring expression comprehension with real‑world knowledge,'' \emph{arXiv preprint}, vol.~arXiv:2508.14080, 2025.
+  \item \textbf{G.~Jin}, Y.~Liang, Y.~Ma, J.~Wu, and G.~Liu, ``NeuroDx‑LM: A clinical large‑scale model for EEG‑based neurological disorder detection,'' \emph{arXiv preprint}, vol.~arXiv:2508.08124, 2025.
+  % \item G.~Zhang$^\*$, J.~Bi$^\*$, J.~Gu, Y.~Chen, and V.~Tresp, ``SPOT! revisiting video‑language models for event understanding,'' \emph{arXiv preprint}, vol.~arXiv:2311.12919, 2023. $^\*$Equal contribution.
+  % \item T.~Liu, Z.~Lai, G.~Zhang, P.~Torr, V.~Demberg, V.~Tresp, and J.~Gu, ``Multimodal pragmatic jailbreak on text‑to‑image models,'' \emph{arXiv preprint}, vol.~arXiv:2409.19149, 2024.
+  % \item H.~Chen, H.~Li, Y.~Zhang, G.~Zhang, J.~Bi, P.~Torr, J.~Gu, D.~Krompass, and V.~Tresp, ``FedBiP: Heterogeneous one‑shot federated learning with personalised latent diffusion models,'' \emph{arXiv preprint}, vol.~arXiv:2410.04810, 2024.
+  % \item J.~Gu, Z.~Han, S.~Chen, A.~Beirami, B.~He, G.~Zhang, R.~Liao, Y.~Qin, V.~Tresp, and P.~Torr, ``A systematic survey of prompt engineering on vision‑language foundation models,'' \emph{arXiv preprint}, vol.~arXiv:2307.12980, 2023.
+\end{enumerate}
+
+% -------- Right column --------
+
+\cvsection{Skills}
+\begin{itemize}
+  \item \textbf{Languages:} Chinese (native speaker), English (proficient), German (intermediate)
+  \item \textbf{Coding:} Python, \LaTeX, Matlab, C++
+\end{itemize}
+
+% \cvsection{Miscellaneous Experience}
+% \cvsubsection{Academic Service}
+% \begin{itemize}
+%   \item \textbf{Conference Reviewer:} CVPR2024–2025, ECCV2024, ICCV2025, NeurIPS2024, COLING2024, ARR2025.
+% \end{itemize}
+
+
+\end{document}
